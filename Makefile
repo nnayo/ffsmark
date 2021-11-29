@@ -1,12 +1,13 @@
-CC=gcc
-CFLAGS=
-LDFLAGS=-lm
-PROGS=ffsmark
+CC ?= gcc
+#CFLAGS=
+LDFLAGS += -lm
 
-CONFS=config_fill.cfg config_nofill.cfg
-SCRIPTS=Scripts/*
+PROGS = ffsmark
 
-TARGET=root@193.52.16.240:~
+CONFS = config_fill.cfg config_nofill.cfg
+SCRIPTS = Scripts/*
+
+TARGET = root@193.52.16.240:~
 
 ffsmark_SRC = postmark.c flashmon_ctrl.c syscaches.c \
 	ffsmark_core.c
